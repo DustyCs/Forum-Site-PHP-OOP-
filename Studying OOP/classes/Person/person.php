@@ -1,5 +1,7 @@
 <?php
 
+namespace Person;
+
 class Customer {
     protected $customer_id = 3;
 

@@ -21,13 +21,13 @@
     <?php
         // include 'includes/person.php';
 
-        $andrew = new Person();
+        $andrew = new Person\Person();
         $andrew->setName('Johnny');
 
-        $apple = new Product(1, 'Apple');
+        $apple = new Person\Product(1, 'Apple');
 
         echo $apple->product_id, $apple->product_name;
-        ECHO Product::$products_director; // use colon for statics
+        ECHO Person\Product::$products_director; // use colon for statics
     ?>
 </body>
 </html>
