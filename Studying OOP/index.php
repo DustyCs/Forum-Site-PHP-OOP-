@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<?php 
+<?php
+    declare(strict_types = 1); // This makes it so that no one can pass the wrong type of variable in a class
     include 'includes/autoload.php'
     // spl_autoload_register('AutoLoader');
     // function AutoLoader($className){
@@ -12,6 +11,8 @@
     // } 
     // MOVED TO A NEW FILE
 ?>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +22,7 @@
     <?php
         // include 'includes/person.php';
 
-        $andrew = new Person\Person();
+        $andrew = new Person\Person(); // the Person\ points to a Person namespace 
         $andrew->setName('Johnny');
 
         $apple = new Person\Product(1, 'Apple');

@@ -23,7 +23,7 @@ class Product {
 
     public static $products_director = 'Johhny';
 
-    public function __construct($product_id, $product_name)
+    public function __construct(Int $product_id, String $product_name) // The Declare/Hinting ensures that the passed object type is as is: Ex $product_id will not accept Strings and will push out an error
     {
         $this->product_id = $product_id;
         $this->product_name = $product_name;
