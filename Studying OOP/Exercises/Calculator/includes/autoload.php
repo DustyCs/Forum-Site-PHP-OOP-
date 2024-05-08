@@ -33,7 +33,7 @@
         
         $extension = ".class.php";
         $full_path = $path . $class_name . $extension;
-
+        // ECHO "<br> HELLO WORLD" . $full_path;
         if (!file_exists($full_path)){
             return false;
         } 

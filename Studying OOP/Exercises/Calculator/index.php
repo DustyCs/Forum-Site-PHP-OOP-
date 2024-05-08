@@ -1,6 +1,7 @@
 <?php 
 declare(strict_types = 1); 
-include 'includes/autoload.php'
+include 'includes/autoload.php';
+// include "classes/calculator.class.php";
 
 ?>
 <!DOCTYPE html>
@@ -11,7 +12,7 @@ include 'includes/autoload.php'
     <title>Document</title>
 </head>
 <body>
-    <form action="calculator.includes.php" method="post">
+    <form action="includes/calculator.includes.php" method="post">
         <p>Calculator</p>
         <input type="number" name="number1" placeholder="First Number">
         <select name="operator">
@@ -23,5 +24,18 @@ include 'includes/autoload.php'
         <input type="number" name="number2" placeholder="Second Number">
         <button type="submit" name="submit">Calculate</button>
     </form>
+    <?php
+        // ECHO $_SERVER['HTTP_HOST'] . " space " . $_SERVER['REQUEST_URI'];
+
+        // $test = new Calculator("add", 2, 3); 
+        // ECHO $test->operator;
+        
+        // $url = "classes/" . "calculator" . ".class.php";
+        // ECHO $url . "<br>";
+        // ECHO var_dump(file_exists($url));
+
+        // $newTest = new TestClass();
+        // ECHO $newTest->property;
+    ?>
 </body>
 </html>
