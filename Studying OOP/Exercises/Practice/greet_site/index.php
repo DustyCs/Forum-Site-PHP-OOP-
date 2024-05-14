@@ -11,7 +11,12 @@ require_once "includes/autoloader.inc.php";
 </head>
 <body>
     <form action="includes/greeter.inc.php" method="post">
-        <textarea name="Name"></textarea>
+        <p>Name</p>
+        <textarea name="Name">Enter Name</textarea> <br>
+        <p>Age</p>
+        <textarea name="Age" rows="2" cols="5">Enter Age</textarea> <br>
+        <p>Country</p>
+        <textarea name="Country" rows="2" cols="15">Enter Country</textarea> <br>
         <button type="submit" name="submit">Login</button>
     </form>
 </body>

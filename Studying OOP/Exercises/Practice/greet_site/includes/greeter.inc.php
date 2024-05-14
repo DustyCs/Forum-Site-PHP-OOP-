@@ -2,12 +2,14 @@
 declare(strict_types= 1);
 require_once "autoloader.inc.php";
 
-$getText = $_POST["Name"];
+$getName = $_POST["Name"];
+$getAge = $_POST["Age"];
+$getCountry = $_POST["Country"];
 
-ECHO $getText;
+$app = new Greeter($getName, $getAge, $getCountry);
 
-$app = new Greeter("johnny", 3, "Alaska");
+ECHO $app->user . $app->age . $app->nationality;
 
-ECHO $app->user;
+Greeter::className();
 
 ?>
