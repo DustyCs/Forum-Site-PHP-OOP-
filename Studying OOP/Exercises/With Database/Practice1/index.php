@@ -11,9 +11,14 @@
 </head>
 <body>
     <?php 
-        $testObj = new Test();
+        // $testObj = new Test();
         // $testObj->getUsersStmt("Patrick", "1");
-        $testObj->setUsersStmt("John", "2", "Hey", "2024-05-25 17:20:36")
+        // $testObj->setUsersStmt("John", "2", "Hey", "2024-05-25 17:20:36")
+        $usersObj = new UsersView();
+        $usersObj->showUser("Patrick");
+
+        $usersObj2 = new UsersContr();
+        // $usersObj2->createUser("Jane", "7", "password", "2024-10-25 17:20:36");
     ?>
 </body>  
 </html>
