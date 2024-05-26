@@ -34,7 +34,7 @@
         </div>
         <div class="bottom-main">
             <div class="signup">
-                <form action="" method="post" id="signup-form">
+                <form action="" method="post" id="signup-form" class="input-form">
                     <h5>SIGN UP</h5>
                     <p id="signup-text">
                         Don't have an account yet? Sign up here!
@@ -47,14 +47,14 @@
                 </form>
             </div>
             <div class="login">
-                <form action="" method="post" id="login-form">
-                <h5>LOGIN</h3>
-                <p id="login-text">
-                    Done with the sign up? Login here!
-                </p>
-                <input type="text" name="username" placeholder="Username">
-                <input type="text" name="password" placeholder="Password">
-                <input type="submit" value="LOGIN">
+                <form action="" method="post" id="login-form" class="input-form">
+                    <h5>LOGIN</h3>
+                    <p id="login-text">
+                        Done with the sign up? Login here!
+                    </p>
+                    <input type="text" name="username" placeholder="Username">
+                    <input type="text" name="password" placeholder="Password">
+                    <input type="submit" value="LOGIN">
                 </form>
             </div>
         </div>

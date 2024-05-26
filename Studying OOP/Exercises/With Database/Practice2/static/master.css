@@ -78,17 +78,27 @@ body {
     height: 40%;
 }
 
+.bottom-main .input-form{
+    margin: 1em;
+}
+
 /* Sign Up */
 
 .bottom-main .signup #signup-form{
     display: flex;
     flex-direction: column;
+    border-left: 1px red solid;
+    padding: 0.5rem;
+    height: 65%;
 }
 
 /* Login */
 .bottom-main .login #login-form{
     display: flex;
     flex-direction: column;
+    background-color: grey;
+    padding: 0.5rem;
+    height: 65%;
 }
 
 /* Footer */
