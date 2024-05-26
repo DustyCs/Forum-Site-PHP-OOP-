@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    border: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Top Main - Nav*/
+
+.top-main{
+    display: flex;
+    justify-content: space-between;
+    height: 6%;
+    background-color: aquamarine;
+}
+
+/* Nav */
+
+.nav-main{
+    display: flex;
+}
+
+.user-status{
+    display: flex;
+}
+
+.nav-main .nav-tabs {
+   margin: auto 1rem;
+}
+
+.user-status .status-tab{
+    margin: auto 1rem;
+}
+
+.nav-main .nav-tabs a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-main .site-title {
+    font-size: 1.7em;
+}
+
+
+/* Middle Main*/
+
+.middle-main{
+    display: inherit;
+    height: 44%;
+}
+
+.middle-main .middle-container {
+    margin: auto;
+    display: inherit;
+    width: 50%;
+}
+
+.middle-main .middle-container .short-text {
+    font-size: 1.5em;
+    margin: auto;
+    width: 80%;
+}
+.middle-main .middle-container .big-text {
+    font-size: 3.5em;
+    width: 20%;
+}
+
+
+/* Botton Main */
+
+.bottom-main{
+    display: flex;
+    margin: auto;
+    height: 40%;
+}
+
+/* Sign Up */
+
+.bottom-main .signup #signup-form{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Login */
+.bottom-main .login #login-form{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer */
+
+footer{
+    background-color: gainsboro;
+    height: 10%;
+}
