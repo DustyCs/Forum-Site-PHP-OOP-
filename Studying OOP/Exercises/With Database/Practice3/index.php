@@ -30,20 +30,20 @@
                     <h4>Current Scores</h4>
                 </div>
                 <div class="board_scores">
-                    <div class="player_score">
-                        <div class="enemy_title">
-
+                    <div class="scores">
+                        <div class="title">
+                            <h5>PLAYER</h5>
                         </div>
-                        <div class="player_score">
-
+                        <div class="score">
+                            <h5>0</h5>
                         </div>
                     </div>
-                    <div class="enemy_score">
-                        <div class="enemy_title">
-
+                    <div class="scores">
+                        <div class="title">
+                            <h5>ENEMY</h5>
                         </div>
-                        <div class="enemy_score">
-                            
+                        <div class="score">
+                            <h5>0</h5>
                         </div>
                     </div>
                 </div>
