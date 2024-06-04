@@ -1,16 +1,18 @@
 <?php 
+ECHO var_dump($_POST);
 
-if(isset($_POST["submit"])){
-    // ECHO "PASSED";
+// if(isset($_POST["submit"])){
+//     // ECHO "PASSED";
 
-    // Grab
+//     // Grab
 
+//     ECHO var_dump($_POST[]);
 
-    // Istantiate
+//     // Istantiate
 
-    // Error Handling
+//     // Error Handling
 
-    // Header
+//     // Header
 
-    header("location: ../index.php?error=none");
-}
+//     // header("location: ../index.php?error=none");
+// }

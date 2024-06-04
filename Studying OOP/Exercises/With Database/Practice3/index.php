@@ -13,15 +13,15 @@
         </div>
     </div>
     <div class="main-container">
-        
         <div class="main_player">
-            <form action="includes/" method="post" class="player_input">
+            <form action="includes/player_choice.inc.php" method="post" class="player_input">
                 <input type="radio" name="player" value="Rock" id="p_rock">
                 <label for="p_rock"><img src="statics/imgs/rock.jpg" alt="Rock" class="game_choice"></label>
                 <input type="radio" name="player" value="Paper" id="p_paper">
                 <label for="p_paper"><img src="statics/imgs/paper.jpg" alt="Paper" class="game_choice"></label>
                 <input type="radio" name="player" value="Scissors" id="p_scissors">
                 <label for="p_scissors"><img src="statics/imgs/scissors.jpg" alt="Scissors" class="game_choice"></label>
+                <button type="submit" onclick="submitEnemyInput"> PLAY </button>
             </form>
         </div>
         <div class="current_scores">
@@ -50,7 +50,7 @@
             </div>
         </div>
         <div class="main_enemy">
-            <form form action="includes/" method="post" class="enemy_input">
+            <form form action="includes/player_choice.inc.php" method="post" class="enemy_input" id="enemy_input">
                 <input type="radio" name="enemy" value="Rock" id="e_rock">
                 <label for="e_rock"><img src="statics/imgs/rock.jpg" alt="Rock" class="game_choice"></label>
                 <input type="radio" name="enemy" value="Paper" id="e_paper">
@@ -62,4 +62,11 @@
     </div>
    
 </body>
+<script>
+
+const submitEnemyInput = () => {
+    document.getElementById("enemy_input").submit();
+    document.getElementById("player_input").submit();
+}
+</script>
 </html>
