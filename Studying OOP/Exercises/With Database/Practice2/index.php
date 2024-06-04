@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,33 +31,33 @@
                     Ipsum vero quisquam saepe magni quisquam! Iusto, aut in?
                 </div>
                 <div class="big-text">
-                    Not really a proper site to care
+                    Not Really a Proper Site to Care
                 </div>
             </div>     
         </div>
         <div class="bottom-main">
             <div class="signup">
-                <form action="" method="post" id="signup-form" class="input-form">
+                <form action="includes/signup.inc.php" method="post" id="signup-form" class="input-form">
                     <h5>SIGN UP</h5>
                     <p id="signup-text">
                         Don't have an account yet? Sign up here!
                     </p>
                     <input type="text" name="username" placeholder="Username">
                     <input type="text" name="password" placeholder="Password">
-                    <input type="text" name="rep-password" placeholder="Repeat Password">
+                    <input type="text" name="reppassword" placeholder="Repeat Password">
                     <input type="text" name="email" placeholder="Email">
-                    <input type="submit" value="SIGN UP">
+                    <button type="submit" name="submit" value="SIGN UP"> SIGN UP</button>
                 </form>
             </div>
             <div class="login">
-                <form action="" method="post" id="login-form" class="input-form">
+                <form action="includes/login.inc.php" method="post" id="login-form" class="input-form">
                     <h5>LOGIN</h3>
                     <p id="login-text">
                         Done with the sign up? Login here!
                     </p>
                     <input type="text" name="username" placeholder="Username">
                     <input type="text" name="password" placeholder="Password">
-                    <input type="submit" value="LOGIN">
+                    <button type="submit" name="submit" value="LOGIN"> LOGIN </button>
                 </form>
             </div>
         </div>
