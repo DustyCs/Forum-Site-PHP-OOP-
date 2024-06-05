@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="statics/js/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="statics/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="navigation-bar">
@@ -15,20 +15,22 @@
     </div>
     <div class="main-container">
         <div class="main_player">
-            <form action="includes/player_choice.inc.php" method="post" class="player_input">
+            <form action="includes/player_choice.inc.php" method="post" class="input" name="input_form">
                 <input type="radio" name="player" value="Rock" id="p_rock">
                 <label for="p_rock"><img src="statics/imgs/rock.jpg" alt="Rock" class="game_choice"></label>
                 <input type="radio" name="player" value="Paper" id="p_paper">
                 <label for="p_paper"><img src="statics/imgs/paper.jpg" alt="Paper" class="game_choice"></label>
                 <input type="radio" name="player" value="Scissors" id="p_scissors">
                 <label for="p_scissors"><img src="statics/imgs/scissors.jpg" alt="Scissors" class="game_choice"></label>
-                <button onclick="submitBothForms"> PLAY </button>
+                <button type="button" id="submit"> PLAY </button>
+
             </form>
         </div>
         <div class="current_scores">
             <div class="score_board">
                 <div class="board_title">
                     <h4>Current Scores</h4>
+                    <button onclick="submitEnemyInput">TEST</button>
                 </div>
                 <div class="board_scores">
                     <div class="scores">
@@ -51,7 +53,7 @@
             </div>
         </div>
         <div class="main_enemy">
-            <form form action="includes/player_choice.inc.php" method="post" class="enemy_input" id="enemy_input">
+            <form form action="includes/player_choice.inc.php" method="post" class="input" id="enemy_input" name="input_form">
                 <input type="radio" name="enemy" value="Rock" id="e_rock">
                 <label for="e_rock"><img src="statics/imgs/rock.jpg" alt="Rock" class="game_choice"></label>
                 <input type="radio" name="enemy" value="Paper" id="e_paper">
@@ -64,42 +66,18 @@
    
 </body>
 <script>
+    $('.game_choice').on('click', function() {
+        var data = {
+            rock : ($(children).closest('#e_rock').val()),
+            paper : ($(children).closest('#e_paper').val())
+        };
 
-// const submitEnemyInput = () => {
-//     document.getElementById("enemy_input").submit();
-//     document.getElementById("player_input").submit();
-// }
+        var children = $(this).closest('#enemy_input').children();
+        console.log($(children).closest('#e_rock').val());
+        console.log($(children).closest('#e_paper').val());
+        console.log(children);
+    })
 
-// function submitBothForms() {
-//     const updateDB = document.forms[0];
-//     const payPal = document.forms[1];
-//     console.log(updateDB, payPal)
-//     fetch(updateDB.action, {
-//         method: updateDB.method,
-//         headers: { "content-type": updateDB.enctype },
-//         body: new FormData(updateDB),
-//     });
-
-//     updateDB.submit();
-// }
-
-async function submitBothForms() {
-    const updateDB = document.forms[1];
-    const payPal = document.forms[0];
-    const res = await fetch(updateDB.action, {
-        method: updateDB.method,
-        headers: { "content-type": updateDB.enctype },
-        body: new FormData(updateDB),
-    });
-    if (!res.ok) {
-        const err = new Error(`DB Update Failed! Status: ${res.status}`);
-        const isJSON = res.headers.get("content-type") == "application/json";
-        err.body = await (isJSON ? res.json() : res.text());
-        throw err;
-    }
-
-    payPal.submit();
-}
 
 </script>
 </html>
