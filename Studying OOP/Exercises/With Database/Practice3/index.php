@@ -79,14 +79,14 @@
                 }
                 
 
-                $("#player_score").load("classes/playerContr.classes.php",
+                $("#player_score").load("classes/player_choice.inc.php",
                     {
                          p_score: playerScore,
                          game_result: result,
                          player_clicked: true
                     }
                 );
-                $("#enemy_score").load("classes/enemyContr.classes.php",
+                $("#enemy_score").load("classes/enemy_choice.inc.php",
                     {
                          e_score: enemyScore,
                          player_clicked: true

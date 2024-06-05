@@ -103,6 +103,7 @@ label {
     margin: auto;
     height: 70%;
     font-size: 3rem;
+    /* color: blue; */
 }
 
 .current_scores .score_board .board_scores .scores .score h5{

@@ -1,27 +1,13 @@
 <?php 
+// $_SESSION["player_score"] = $_POST["p_score"];
 
-//CONTROLLER 
-// ECHO var_dump($_POST);
+$game_result = $_POST["game_result"];
+$playerScore = $_POST["p_score"];
+$clickStatus = $_POST["player_clicked"];
+
+
 if($_POST["player_clicked"]) {
-    ECHO $_POST["somethingNew"];
+    ECHO $_POST["p_score"] . $_POST["game_result"];
 }
 
-$_SESSION["player_score"] = $_POST["somethingNew"];
-
-
-
-// if(isset($_POST["submit"])){
-//     // ECHO "PASSED";
-
-//     // Grab
-
-//     ECHO var_dump($_POST[]);
-
-//     // Istantiate
-
-//     // Error Handling
-
-//     // Header
-
-//     // header("location: ../index.php?error=none");
-// }
+// IF PLAYER WIN REGISTER THE WIN INTO THE DATABASE AND SO ON WHEN LOSE OR TIE!
