@@ -1,5 +1,14 @@
 <?php 
-ECHO var_dump($_POST);
+
+//CONTROLLER 
+// ECHO var_dump($_POST);
+if($_POST["player_clicked"]) {
+    ECHO $_POST["somethingNew"];
+}
+
+$_SESSION["player_score"] = $_POST["somethingNew"];
+
+
 
 // if(isset($_POST["submit"])){
 //     // ECHO "PASSED";
