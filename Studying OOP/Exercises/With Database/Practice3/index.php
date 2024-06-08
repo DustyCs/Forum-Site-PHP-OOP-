@@ -42,11 +42,17 @@
 
         }
 
-        $(document).ready(function() {
-            playerScore = 0;
-            enemyScore = 0;
-
+        $(document).ready(function() {  
+            let game_total = 0;   
             $("#play").on('click', function(){
+                let playerScore = 0;
+                let enemyScore = 0;
+                let enemy_choice = $('input[name=enemy]:checked', '#enemy_form').val()
+                let player_choice = $('input[name=player]:checked', '#player_form').val();
+                let gameResult = rpsFun($('input[name=player]:checked', '#player_form').val(), $('input[name=enemy]:checked', '#enemy_form').val());
+                let result;
+            
+
                 switch(Math.floor(Math.random() * 3)){
                     case 0:
                         $('#e_rock').prop('checked', true);
@@ -59,9 +65,6 @@
                         break;
                     
                 }
-
-                let gameResult = rpsFun($('input[name=player]:checked', '#player_form').val(), $('input[name=enemy]:checked', '#enemy_form').val());
-                let result;
 
                 switch(gameResult){
                     case 0:
@@ -78,25 +81,32 @@
                         break;
                 }
                 
-
-                $("#player_score").load("classes/player_choice.inc.php",
+                game_total = game_total + 1;
+                $("#player_score").load("includes/player_choice.inc.php",
                     {
                          p_score: playerScore,
                          game_result: result,
+                         playerChoice: player_choice,
+                         enemyChoice: enemy_choice,
                          player_clicked: true
                     }
                 );
-                $("#enemy_score").load("classes/enemy_choice.inc.php",
+
+                $("#enemy_score").load("includes/enemy_choice.inc.php",
                     {
                          e_score: enemyScore,
                          player_clicked: true
                     }
                 );
+                
+                $(".score_tab").load("includes/score_tab.inc.php", {
+                    gamesPlayed: game_total
+                });
 
                 
 
-                // console.log($('input[name=player]:checked', '#player_form').val());
-                // console.log($('input[name=enemy]:checked', '#enemy_form').val());
+                console.log($('input[name=player]:checked', '#player_form').val());
+                console.log($('input[name=enemy]:checked', '#enemy_form').val());
                 // console.log(Math.Floor(Math.random() * 2));
             }
         );
@@ -108,9 +118,13 @@
 </head>
 <body>
     <div class="navigation-bar">
-        <div class="main-nav">
-
-        </div>
+        <div class="score_tab">
+            <!-- <div class="game_result">
+                <div class="result_cont">
+                    <div class="result" id="result">WIN</div>
+                </div>
+            </div>
+        </div> -->
     </div>
     <div class="main-container">
         <div class="main_player">

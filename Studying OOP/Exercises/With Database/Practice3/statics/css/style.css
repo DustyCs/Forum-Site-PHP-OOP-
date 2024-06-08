@@ -28,13 +28,33 @@ label {
     height: 20vh;
 }
 
-.navigation-bar .main-nav {
+.navigation-bar .score_tab {
     width: 50%;
     height: 100%;
     border: 1px red solid;
     margin: 1rem auto;
+    display: flex;
+    justify-content: flex-start;
 }
 
+.navigation-bar .score_tab .game_result{
+    width: 15%;
+    height: 50%;
+    margin: auto 1rem;
+    border: 1px blue solid;
+}
+
+.navigation-bar .score_tab .game_result .result{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-bar .score_tab .game_result .result_cont {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
 /* Main Container */
 
 .main-container {
