@@ -43,16 +43,10 @@
         }
 
         $(document).ready(function() {  
-            let game_total = 0;   
+            let game_total = 0;
+            let playerScore = 0;
+            let enemyScore = 0;   
             $("#play").on('click', function(){
-                let playerScore = 0;
-                let enemyScore = 0;
-                let enemy_choice = $('input[name=enemy]:checked', '#enemy_form').val()
-                let player_choice = $('input[name=player]:checked', '#player_form').val();
-                let gameResult = rpsFun($('input[name=player]:checked', '#player_form').val(), $('input[name=enemy]:checked', '#enemy_form').val());
-                let result;
-            
-
                 switch(Math.floor(Math.random() * 3)){
                     case 0:
                         $('#e_rock').prop('checked', true);
@@ -65,6 +59,12 @@
                         break;
                     
                 }
+
+                let enemy_choice = $('input[name=enemy]:checked', '#enemy_form').val()
+                let player_choice = $('input[name=player]:checked', '#player_form').val();
+                let gameResult = rpsFun($('input[name=player]:checked', '#player_form').val(), $('input[name=enemy]:checked', '#enemy_form').val());
+                let result;
+            
 
                 switch(gameResult){
                     case 0:
@@ -107,7 +107,6 @@
 
                 console.log($('input[name=player]:checked', '#player_form').val());
                 console.log($('input[name=enemy]:checked', '#enemy_form').val());
-                // console.log(Math.Floor(Math.random() * 2));
             }
         );
     });
@@ -118,13 +117,7 @@
 </head>
 <body>
     <div class="navigation-bar">
-        <div class="score_tab">
-            <!-- <div class="game_result">
-                <div class="result_cont">
-                    <div class="result" id="result">WIN</div>
-                </div>
-            </div>
-        </div> -->
+        <div class="score_tab"> </div> 
     </div>
     <div class="main-container">
         <div class="main_player">
