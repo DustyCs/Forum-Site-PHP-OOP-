@@ -14,8 +14,19 @@ for($x = 0; $x <= ($h_total - 1); $x++){
     renderResult($h_game_result);
 }
 
+include_once "../classes/dbh.classes.php";
+include_once "../classes/scoreTabContr.classes.php";
+
+// $scoreTab = new ScoreTabContr();
+
 // LOOK OUTSIDE THE BOX
 // There are many ways to have a unique identifier but heres the thing we dont need that here
 // the plan is to have the database control this view and how would this view control the html? IT WONT
 // the js/jquery would control it from OUTSIDE since the purpose of jquery in this project is to control the view/render to the user  
 // and php purpose to control the back end!!!
+
+
+// TO DO
+
+// THIS IS JUST A TEST
+// NEED TO GET STRAIGHT FOR DB THEN AUTOMATICALLY DISPLAY THE MATCHES WITHOUT THE PLAYER NEEDING TO PRESS THE BUTTON!
