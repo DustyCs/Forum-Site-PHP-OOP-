@@ -15,9 +15,12 @@ for($x = 0; $x <= ($h_total - 1); $x++){
 }
 
 include_once "../classes/dbh.classes.php";
+include_once "../classes/scoreTab.classes.php";
 include_once "../classes/scoreTabContr.classes.php";
 
-// $scoreTab = new ScoreTabContr();
+$scoreTab = new ScoreTabContr();
+$scoreTab->getScores();
+ECHO var_dump($scoreTab->scores);
 
 // LOOK OUTSIDE THE BOX
 // There are many ways to have a unique identifier but heres the thing we dont need that here
