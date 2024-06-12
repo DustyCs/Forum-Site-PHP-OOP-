@@ -1,18 +1,26 @@
 <?php 
 
 $h_total = $_POST["gamesPlayed"];
-$h_result = 'WIN';
-$h_div_result = '<div class="result" id="result">'. $h_result .'</div>';
-$h_div2_result_container = '<div class="result_cont">'. $h_div_result .'</div>';
-$h_game_result = '<div class="game_result">'. $h_div2_result_container . '</div>';
 
-function renderResult($result){
-    ECHO $result;
+
+// $h_result = 'WIN';
+// $h_div_result = '<div class="result" id="result">'. $h_result .'</div>';
+// $h_div2_result_container = '<div class="result_cont">'. $h_div_result .'</div>';
+// $h_game_result = '<div class="game_result">'. $h_div2_result_container . '</div>';
+
+function renderResult(Array $array){
+    $array = $array;
+    ECHO $array[0];
+    $h_result = 'WIN';
+    $h_div_result = '<div class="result" id="result">'. $h_result .'</div>';
+    $h_div2_result_container = '<div class="result_cont">'. $h_div_result .'</div>';
+    $h_game_result = '<div class="game_result">'. $h_div2_result_container . '</div>';
+
+    return $h_game_result;
 }
 
-for($x = 0; $x <= ($h_total - 1); $x++){
-    renderResult($h_game_result);
-}
+// ECHO renderResult();
+
 
 include_once "../classes/dbh.classes.php";
 include_once "../classes/scoreTab.classes.php";
@@ -20,7 +28,22 @@ include_once "../classes/scoreTabContr.classes.php";
 
 $scoreTab = new ScoreTabContr();
 $scoreTab->getScores();
-ECHO var_dump($scoreTab->scores);
+// ECHO $scoreTab->scores[1][0];
+// ECHO count($scoreTab->scores);
+$scoreCount = count($scoreTab->scores);
+
+// for($x = 0; $x <= ($h_total - 1); $x++){
+//     ECHO renderResult();
+// }
+
+for($x=0; $x < ($scoreCount); $x++){
+    ECHO renderResult($scoreTab->scores[$x]);
+}
+
+// ECHO renderResult($scoreTab->scores[1]);
+
+
+
 
 // LOOK OUTSIDE THE BOX
 // There are many ways to have a unique identifier but heres the thing we dont need that here
