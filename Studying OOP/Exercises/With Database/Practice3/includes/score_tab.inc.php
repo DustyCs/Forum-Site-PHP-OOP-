@@ -10,8 +10,8 @@ $h_total = $_POST["gamesPlayed"];
 
 function renderResult(Array $array){
     $array = $array;
-    ECHO $array[0];
-    $h_result = 'WIN';
+    ECHO $array[0]; // this gets called on the first scenario means this function is called twice ...
+    $h_result = $array[1];
     $h_div_result = '<div class="result" id="result">'. $h_result .'</div>';
     $h_div2_result_container = '<div class="result_cont">'. $h_div_result .'</div>';
     $h_game_result = '<div class="game_result">'. $h_div2_result_container . '</div>';
@@ -36,8 +36,18 @@ $scoreCount = count($scoreTab->scores);
 //     ECHO renderResult();
 // }
 
+$score_array = [];
+
+
 for($x=0; $x < ($scoreCount); $x++){
-    ECHO renderResult($scoreTab->scores[$x]);
+    array_push($score_array, renderResult($scoreTab->scores[$x]));
+    // ECHO renderResult($scoreTab->scores[$x]); // This echoes the all the game_id while also echoing the divs scenario 1
+}
+
+$reversed_score_array = array_reverse($score_array);
+
+foreach($reversed_score_array as $x){
+    ECHO $x; // This ignores the div functions first which is the game_id then renders the html here! 
 }
 
 // ECHO renderResult($scoreTab->scores[1]);
