@@ -132,16 +132,6 @@ label {
     margin: auto;
 }
 
-/* .current_scores .score_board .board_scores .enemy_scores{
-    height: 100%;
-    width: 50%;
-    border: 1px red solid;
-    display: flex;
-    flex-direction: column;
-} */
-
-
-
 /* Player Main */
 .main_player {
     width: 20%;
