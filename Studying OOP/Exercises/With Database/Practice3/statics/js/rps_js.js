@@ -4,12 +4,16 @@ $(document).ready(function() {
     let game_total = 0;
     let playerScore = 0;
     let enemyScore = 0; 
-    
+    $("input[name=enemy]").prop('disabled', true);
+    $("#play").prop('disabled', false);
+
     $("#play").on('click', function(){
+        $("#play").prop('disabled', true);
+        $("input[name=enemy]").prop('disabled', false);
+
         if(!$('input[name=player]:checked', '#player_form').val()){
             console.log('false')
         }
-        
         else{
             switch(Math.floor(Math.random() * 3)){
                 case 0:
@@ -59,13 +63,25 @@ $(document).ready(function() {
                 }
             );
 
+            $("#enemy_score").load("includes/enemy_choice.inc.php",
+                {
+                     e_score: enemyScore
+                }
+            );
+
             $(".result_popup").show('fast');
             setTimeout(function () {
                 $('.result_popup').fadeOut('fast');
+                
+                $('input[name="enemy"]').prop('checked', false);
+                $('input[name="player"]').prop('checked', false);
+                $("#play").prop('disabled', false);
+                $("input[name=enemy]").prop('disabled', true);
             }, 1500);
             
-            console.log($('input[name=player]:checked', '#player_form').val());
-            console.log($('input[name=enemy]:checked', '#enemy_form').val());
+            
+            // console.log($('input[name=player]:checked', '#player_form').val());
+            // console.log($('input[name=enemy]:checked', '#enemy_form').val());
         }
     }
 );

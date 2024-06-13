@@ -5,8 +5,8 @@ $clickStatus = $_POST["player_clicked"];
 $player_choice = $_POST["playerChoice"];
 $enemy_choice = $_POST["enemyChoice"];
 
-if($_POST["player_clicked"]) {
-    ECHO $_POST["p_score"] . $_POST["game_result"];
+if($_POST["player_clicked"]) { // this is unnecessary ngl
+    ECHO $_POST["p_score"];
 }
 
 include_once "../classes/dbh.classes.php";
