@@ -1,0 +1,22 @@
+/* Player Main */
+.main_player {
+    width: 20%;
+    margin: auto 5%;
+}
+
+.main_player .player_input {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Enemy Main */
+
+.main_enemy {
+    width: 20%;
+    margin: auto 5%;
+}
+
+.main_enemy .enemy_input {
+    display: flex;
+    flex-direction: column;
+}

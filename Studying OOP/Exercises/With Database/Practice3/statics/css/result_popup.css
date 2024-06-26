@@ -14,3 +14,20 @@
     border: 1 solid transparent;
     border-radius: 10px;
 }
+
+.no_input_popup {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: none;
+    text-align: center;
+}
+
+.no_input_popup h4{
+    background-color: aquamarine;
+    font-size: 5rem;
+    margin: auto;
+    width: 25%;
+    border: 1 solid transparent;
+    border-radius: 10px;
+}

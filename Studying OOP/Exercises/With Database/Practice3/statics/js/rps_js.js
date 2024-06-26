@@ -10,9 +10,12 @@ $(document).ready(function() {
     $("#play").on('click', function(){
         $("#play").prop('disabled', true);
         $("input[name=enemy]").prop('disabled', false);
-
         if(!$('input[name=player]:checked', '#player_form').val()){
             console.log('false')
+            noPlayerInput();
+            setTimeout(function () {
+                $("#play").prop('disabled', false); 
+            }, 1500);
         }
         else{
             switch(Math.floor(Math.random() * 3)){
@@ -62,6 +65,8 @@ $(document).ready(function() {
                     player_clicked: true
                 }
             );
+            
+            // Animation
 
             $("#enemy_score").load("includes/enemy_choice.inc.php",
                 {
@@ -70,6 +75,7 @@ $(document).ready(function() {
             );
 
             $(".result_popup").show('fast');
+
             setTimeout(function () {
                 $('.result_popup').fadeOut('fast');
                 
@@ -94,3 +100,19 @@ setInterval(
 
 });
 
+// TO DO
+
+// need to reset player state since the button cant reset it if its disabled - Done
+// fix game result design
+// update result animation + design
+// change game design
+
+// DRY
+
+// function for timeout and showing popups
+
+// next phase
+// make the game results clickable
+// add history
+// make users login to save their history
+// if user is not logged in delete their game history on refresh 

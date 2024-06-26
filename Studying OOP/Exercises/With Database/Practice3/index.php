@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <link rel="stylesheet" href="statics/css/style.css">
     <link rel="stylesheet" href="statics/css/result_popup.css">
+    <link rel="stylesheet" href="statics/css/nav_style.css">
+    <link rel="stylesheet" href="statics/css/game_options.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="statics/js/jquery-3.7.1.min.js"></script>
     <script src="statics/js/util_func.js"></script>
@@ -67,6 +71,9 @@
     </div>
     <div class="result_popup">
         <h4 id="result_popup_msg">You Win!</h4>
+    </div>
+    <div class="no_input_popup">
+        <h4 id="no_input_popup_msg">Select!</h4>
     </div>
 </body>
 </html>
