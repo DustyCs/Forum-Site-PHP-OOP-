@@ -12,9 +12,9 @@ const noPlayerInput = () => {
         }, 1000)
 }
 
-// console.log($('input[name=player]:checked', '#player_form').val());         
-// console.log($('input[name=enemy]:checked', '#enemy_form').val());
+// Bugs
 
-// functions maybe?
-// clean up the rps_js using funcs here?
-//this works?
+const bugTest = () => {
+        console.log('test');
+}
+

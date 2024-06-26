@@ -1,6 +1,6 @@
 <?php
 
-class gameResult_PageCont extends Player{
+class gameResult_PageCont extends ScoreTab{
     public function __construct(){
         
     }

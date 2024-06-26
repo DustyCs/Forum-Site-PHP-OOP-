@@ -85,20 +85,25 @@ $(document).ready(function() {
                 $("input[name=enemy]").prop('disabled', true);
             }, 1500);
             
-            
-            // console.log($('input[name=player]:checked', '#player_form').val());
-            // console.log($('input[name=enemy]:checked', '#enemy_form').val());
         }
     }
 );
 
 setInterval(
     function(){
-        $(".score_tab").load("includes/score_tab.inc.php");
+        $(".score_tab").load("includes/score_tab.inc.php"); 
     }, 5000
+
+
+    
 )
 
 });
+
+// $('.game_result').on('click', function(){
+//     $(".result_popup").show('fast');
+//     $(".result_popup").fadeOut('fast');
+// })
 
 // TO DO
 

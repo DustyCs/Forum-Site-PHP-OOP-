@@ -7,10 +7,12 @@ include_once "../classes/scoreTabContr.classes.php";
 function renderResult(Array $array){
     $array = $array;
     $h_result = $array[1];
+    $h_game_id = $array[0];
+    // $cb_func = "console.log(this)";
+    $cb_func = "bugTest2(this)";
     $h_div_result = '<div class="result" id="result">'. $h_result .'</div>';
     $h_div2_result_container = '<div class="result_cont">'. $h_div_result .'</div>';
-    $h_game_result = '<div class="game_result">'. $h_div2_result_container . '</div>';
-    $h_game_result_a = '';
+    $h_game_result = '<div class="game_result"' . 'id='. $h_game_id  . ' onclick=' . $cb_func . '>'. $h_div2_result_container . '</div>';
 
     return $h_game_result;
 }

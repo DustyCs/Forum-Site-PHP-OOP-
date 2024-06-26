@@ -22,7 +22,18 @@
         <div class="score_tab"> </div> 
     </div>
     <div class="main-container">
-        
+        <div>Game Result</div>
+        <div>Player Choice</div>
+        <div>Enemy Choice</div>
+        <div>Game Date</div>
+        <div>Game Id</div>
     </div>
 </body>
 </html>
+
+<!-- Use Sessions - - -
+
+TO DO
+
+
+-->
