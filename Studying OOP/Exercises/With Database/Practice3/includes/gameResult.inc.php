@@ -1,8 +1,13 @@
 <?php
 
-include_once "../classes/dbh.classes.php";
-include_once "../classes/gameResult_PageCont.classes.php";
+// include_once "../classes/dbh.classes.php";
+// include_once "../classes/gameResult_PageCont.classes.php";
 
-ECHO 'Hello world';
+// ^^ includes incomplete gives this function an error
 
-$_SESSION['game_id'] = "Hello";
+ECHO '<script>console.log("Runned")</script>';
+
+session_start();
+ECHO session_id();
+
+$_SESSION['game_id'] = 'Hello4'; // WORKS
