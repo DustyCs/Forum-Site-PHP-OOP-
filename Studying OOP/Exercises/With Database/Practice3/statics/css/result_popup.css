@@ -31,3 +31,9 @@
     border: 1 solid transparent;
     border-radius: 10px;
 }
+
+#session-container {
+    position: absolute;
+    display: none;
+
+}

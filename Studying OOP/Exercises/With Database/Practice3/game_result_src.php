@@ -1,3 +1,6 @@
+<?php if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+} ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,8 +16,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="statics/js/jquery-3.7.1.min.js"></script>
     <script src="statics/js/util_func.js"></script>
-    <script src="statics/js/main_rps_func.js"></script>
-    <script src="statics/js/rps_js.js"></script>
 
 </head>
 <body>
@@ -26,7 +27,8 @@
         <div>Player Choice</div>
         <div>Enemy Choice</div>
         <div>Game Date</div>
-        <div>Game Id</div>
+        <div>Game Id <?php ECHO $_SESSION['game_id'] ?></div>
+    
     </div>
 </body>
 </html>

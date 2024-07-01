@@ -1,3 +1,8 @@
+<?php if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+$_SESSION['game_id'] = 'Hey'
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,5 +81,6 @@
     <div class="no_input_popup">
         <h4 id="no_input_popup_msg">Select!</h4>
     </div>
+    <div id="session_container"></div>
 </body>
 </html>
