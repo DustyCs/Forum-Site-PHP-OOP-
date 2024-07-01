@@ -28,7 +28,7 @@
         <div>Player Choice</div>
         <div>Enemy Choice</div>
         <div>Game Date</div>
-        <div>Game Id <?php ECHO $_SESSION['game_id'] ?></div>
+        <div>Game Id <?php ECHO $_SESSION['game_id'] . $_SESSION['test_id'] ?></div>
     
     </div>
 </body>

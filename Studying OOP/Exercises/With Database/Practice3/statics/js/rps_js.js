@@ -6,7 +6,6 @@ $(document).ready(function() {
     let enemyScore = 0; 
     $("input[name=enemy]").prop('disabled', true);
     $("#play").prop('disabled', false);
-    // $("#session_container").load("includes/test_session.php")
 
     $("#play").on('click', function(){
         $("#play").prop('disabled', true);
