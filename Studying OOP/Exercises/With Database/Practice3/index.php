@@ -1,7 +1,10 @@
 <?php if (session_status() === PHP_SESSION_NONE) {
     session_start();
+    ECHO session_id();
+
+    // unset($_SESSION['game_id']);
+    // $_SESSION['game_id'] = 'Hey';
 }
-$_SESSION['game_id'] = 'Hey'
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,5 +85,6 @@ $_SESSION['game_id'] = 'Hey'
         <h4 id="no_input_popup_msg">Select!</h4>
     </div>
     <div id="session_container"></div>
+    <?php //ECHO $_SESSION['game_id'];  ?>
 </body>
 </html>

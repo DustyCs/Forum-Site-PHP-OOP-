@@ -1,5 +1,6 @@
 <?php if (session_status() === PHP_SESSION_NONE) {
     session_start();
+    ECHO session_id();
 } ?>
 <!DOCTYPE html>
 <html lang="en">
