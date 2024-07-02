@@ -42,6 +42,7 @@ $(document).ready(function() {
                     enemyScore = enemyScore + 1;
                     result = "Lose";
                     $('#result_popup_msg').text(result); 
+                    break;
                 case 1:
                     playerScore = playerScore + 1;
                     result = "Win";
@@ -82,16 +83,17 @@ $(document).ready(function() {
                 $('input[name="player"]').prop('checked', false);
                 $("#play").prop('disabled', false);
                 $("input[name=enemy]").prop('disabled', true);
+                refreshScore();
             }, 1500);
             
         }
     }
 );
 
-setInterval(
+setTimeout(
     function(){
-        $(".score_tab").load("includes/score_tab.inc.php"); 
-    }, 5000 // Place this on a seperate file maybe... since it has no connection with this file
+        $(".scores_tab").load("includes/score_tab.inc.php"); 
+    }, 1000 // Place this on a seperate file maybe... since it has no connection with this file
 
 
     
@@ -99,14 +101,8 @@ setInterval(
 
 });
 
-// $('.game_result').on('click', function(){
-//     $(".result_popup").show('fast');
-//     $(".result_popup").fadeOut('fast');
-// })
-
 // TO DO
 
-// need to reset player state since the button cant reset it if its disabled - Done
 // fix game result design
 // update result animation + design
 // change game design

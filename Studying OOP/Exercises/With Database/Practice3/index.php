@@ -28,7 +28,10 @@
 </head>
 <body>
     <div class="navigation-bar">
-        <div class="score_tab"> </div> 
+        <div class="score_tab"> 
+            <button class="refreshAnimation" id="refresh" onclick="refreshScore()"></button>
+            <div class="scores_tab"></div>
+        </div> 
     </div>
     <div class="main-container">
         <div class="main_player">

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="statics/css/result_popup.css">
     <link rel="stylesheet" href="statics/css/nav_style.css">
     <link rel="stylesheet" href="statics/css/game_options.css">
+    <link rel="stylesheet" href="statics/css/gameResultPage.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="statics/js/jquery-3.7.1.min.js"></script>
@@ -25,11 +26,9 @@
         <div class="score_tab"> </div> 
     </div>
     <div class="main-container">
-        <div>Game Result</div>
-        <div>Player Choice</div>
-        <div>Enemy Choice</div>
-        <div>Game Date</div>
-        <div>Game Id <?php ECHO $_SESSION['game_id'] ?></div>
+        <div class="gameResult">
+            
+        </div>
     </div>
 </body>
 </html>

@@ -18,3 +18,15 @@ const bugTest = () => {
         console.log('test');
 }
 
+const refreshScore = () => {
+        $('#refresh').removeClass("refreshAnimation");
+        $(".scores_tab").hide('fast');
+        setTimeout(function(){
+                $('#refresh').addClass("refreshAnimation");
+
+                setTimeout(function(){
+                $(".scores_tab").show('fast');
+                $(".scores_tab").load("includes/score_tab.inc.php");}, 900)
+
+        }, 500)
+}

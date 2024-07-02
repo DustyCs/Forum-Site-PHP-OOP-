@@ -1,5 +1,5 @@
 $(document).ready(function (){
-    $(".main-container").load("includes/game_results.inc.php");
+    $(".gameResult").load("includes/game_results.inc.php");
 
     setInterval( function(){
         $(".score_tab").load("includes/score_tab.inc.php"); 
