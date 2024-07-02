@@ -8,5 +8,12 @@ class ScoreTab extends Dbh{
         $users = $stmt->fetchAll();
         return $users;
     }
+
+    protected function getDataById($game_id){
+        $stmt = $this->connect()->prepare("SELECT * FROM game_results WHERE game_id = ?");
+        $stmt->execute(array($game_id));
+        $gameResult = $stmt->fetchAll();
+        return $gameResult;
+    }
 }
 

@@ -41,8 +41,7 @@ $(document).ready(function() {
                 case 0:
                     enemyScore = enemyScore + 1;
                     result = "Lose";
-                    $('#result_popup_msg').text(result); // can also use .html instead of .text
-                    break;
+                    $('#result_popup_msg').text(result); 
                 case 1:
                     playerScore = playerScore + 1;
                     result = "Win";
@@ -92,7 +91,7 @@ $(document).ready(function() {
 setInterval(
     function(){
         $(".score_tab").load("includes/score_tab.inc.php"); 
-    }, 5000
+    }, 5000 // Place this on a seperate file maybe... since it has no connection with this file
 
 
     

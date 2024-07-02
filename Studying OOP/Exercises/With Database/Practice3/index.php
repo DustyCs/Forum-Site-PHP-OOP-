@@ -1,6 +1,6 @@
 <?php if (session_status() === PHP_SESSION_NONE) {
     session_start();
-    ECHO session_id();
+    // ECHO session_id();
 
     // unset($_SESSION['game_id']);
     // $_SESSION['game_id'] = 'Hey';

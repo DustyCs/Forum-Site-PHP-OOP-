@@ -1,7 +1,7 @@
 const bugTest2 = (id) => {
-    console.log(id);
+    game = id.id;
     $('.game_result').load("includes/gameResult.inc.php", {
-        game_id: '1',
+        game_id: game,
         }
     );
     window.location.replace("./game_result_src.php");
