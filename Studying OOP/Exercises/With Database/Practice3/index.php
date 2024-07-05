@@ -34,14 +34,14 @@
         </div> 
     </div>
     <div class="main-container">
-        <div class="main_player">
-            <form method="post" class="player_input" id="player_form">
+        <div class="main_c">
+            <form method="post" class="c_input" id="player_form">
                 <input type="radio" name="player" value="Rock" id="p_rock">
-                <label for="p_rock"><img src="statics/imgs/rock.jpg" alt="Rock" class="game_choice"></label>
+                <label for="p_rock"><img src="statics/imgs/rock.png" alt="Rock" class="game_choice"></label>
                 <input type="radio" name="player" value="Paper" id="p_paper">
-                <label for="p_paper"><img src="statics/imgs/paper.jpg" alt="Paper" class="game_choice"></label>
+                <label for="p_paper"><img src="statics/imgs/paper.png" alt="Paper" class="game_choice"></label>
                 <input type="radio" name="player" value="Scissors" id="p_scissors">
-                <label for="p_scissors"><img src="statics/imgs/scissors.jpg" alt="Scissors" class="game_choice"></label>
+                <label for="p_scissors"><img src="statics/imgs/scissors.png" alt="Scissors" class="game_choice"></label>
             </form>
         </div>
         <div class="current_scores">
@@ -70,14 +70,14 @@
                 </div>
             </div>
         </div>
-        <div class="main_enemy">
-            <form method="post" class="enemy_input" id="enemy_form">
+        <div class="main_c">
+            <form method="post" class="c_input" id="enemy_form">
                 <input type="radio" name="enemy" value="Rock" id="e_rock">
-                <label for="e_rock"><img src="statics/imgs/rock.jpg" alt="Rock" class="game_choice"></label>
+                <label for="e_rock"><img src="statics/imgs/rock.png" alt="Rock" class="game_choice"></label>
                 <input type="radio" name="enemy" value="Paper" id="e_paper">
-                <label for="e_paper"><img src="statics/imgs/paper.jpg" alt="Paper" class="game_choice"></label>
+                <label for="e_paper"><img src="statics/imgs/paper.png" alt="Paper" class="game_choice"></label>
                 <input type="radio" name="enemy" value="Scissors" id="e_scissors">
-                <label for="e_scissors"><img src="statics/imgs/scissors.jpg" alt="Scissors" class="game_choice"></label>
+                <label for="e_scissors"><img src="statics/imgs/scissors.png" alt="Scissors" class="game_choice"></label>
             </form> 
         </div>
     </div>
@@ -85,7 +85,7 @@
         <h4 id="result_popup_msg">You Win!</h4>
     </div>
     <div class="no_input_popup">
-        <h4 id="no_input_popup_msg">Select!</h4>
+        <h4 id="no_input_popup_msg">SELECT SOMETHING</h4>
     </div>
     <div id="session_container"></div>
     <?php //ECHO $_SESSION['game_id'];  ?>

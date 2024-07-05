@@ -1,16 +1,47 @@
 /* Player Main */
-.main_player {
+.main_c {
     width: 20%;
     margin: auto 5%;
+    border: 5px black solid;
+    border-radius: 1rem;
+    padding: 2em;
 }
 
-.main_player .player_input {
+.main_c .c_input {
     display: flex;
     flex-direction: column;
 }
 
-/* Enemy Main */
+.main_c .c_input label{
+    padding: 1em;
+}
 
+.main_c .c_input label:hover{
+    border: 5px solid black;
+
+}
+
+.main_c input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+}
+
+/* .main_c input:checked{
+    border: 5px solid black;
+} */
+
+input[type="radio"]:checked + label {
+    border: 5px solid black;
+    margin: 1em;
+    background-color: gray;
+}
+
+/* Enemy Main */
+/* 
 .main_enemy {
     width: 20%;
     margin: auto 5%;
@@ -19,4 +50,6 @@
 .main_enemy .enemy_input {
     display: flex;
     flex-direction: column;
-}
+} */
+
+/* Same Thing ^^^ */

@@ -12,22 +12,37 @@
     <link rel="stylesheet" href="statics/css/style.css">
     <link rel="stylesheet" href="statics/css/result_popup.css">
     <link rel="stylesheet" href="statics/css/nav_style.css">
-    <link rel="stylesheet" href="statics/css/game_options.css">
     <link rel="stylesheet" href="statics/css/gameResultPage.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="statics/js/jquery-3.7.1.min.js"></script>
     <script src="statics/js/util_func.js"></script>
     <script src="statics/js/resultPageMJS.js"></script>
+    <script src="statics/js/result_page.js"></script>
 
 </head>
 <body>
     <div class="navigation-bar">
-        <div class="score_tab"> </div> 
+        <div class="score_tab"> 
+            <!-- <button class="refreshAnimation" id="refresh" onclick="refreshScore()"></button> -->
+            <div class="scores_tab"></div>
+        </div> 
     </div>
     <div class="main-container">
         <div class="gameResult">
             
+        </div>
+        <div class="gameHistory">
+            <div class="history-row-titles">
+                <div class="main-row">Game Result</div>
+                <div class="main-row">Player Choice</div>
+                <div class="main-row">Enemy Choice</div>
+                <div class="main-row">Game Date</div>
+                <div class="main-row">Game Id</div>
+            </div>
+            <div class="history-row-data">
+
+            </div>
         </div>
     </div>
 </body>
@@ -36,6 +51,14 @@
 <!-- Use Sessions - - -
 
 TO DO
+
+
+If theres more than 10 results send it to the next page using ajax
+get 10 more overwrite the first ten then again and again until user removes it all
+
+jquery
+
+check how many divs / class? there is in the history row data then depending on that add 1, 2, 3, 4...10 pages
 
 
 -->

@@ -8,7 +8,8 @@
 .navigation-bar .score_tab {
     width: 50%;
     height: 100%;
-    border: 1px red solid;
+    border: 5px black solid;
+    border-radius: 1rem;
     margin: 1rem auto;
     display: flex;
     justify-content: flex-start;
@@ -16,18 +17,19 @@
 
 .navigation-bar .scores_tab {
     width: 90%;
-    border: 1px red solid;
+    border: 3px black solid;
     margin: 1rem auto;
     display: flex;
     justify-content: flex-start;
-    overflow: hidden;
+    overflow: auto;
+    scrollbar-color: black white;
 }
 
 .navigation-bar .scores_tab .game_result{
     width: 13em;
     height: 35%;
     margin: auto 1rem;
-    border: 1px blue solid;
+    border: 3px black solid;
     flex-shrink: 0;
 }
 

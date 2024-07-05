@@ -107,12 +107,7 @@ setTimeout(
 // update result animation + design
 // change game design
 
-// DRY
-
-// function for timeout and showing popups
-
-// next phase
-// make the game results clickable
+// next phase 
 // add history
 // make users login to save their history
 // if user is not logged in delete their game history on refresh 
