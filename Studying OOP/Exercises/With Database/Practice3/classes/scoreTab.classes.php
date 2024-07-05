@@ -15,5 +15,10 @@ class ScoreTab extends Dbh{
         $gameResult = $stmt->fetchAll();
         return $gameResult;
     }
+
+    protected function removeSelectedResult($game_id){
+        $stmt = $this->connect()->prepare("DELETE FROM game_results WHERE game_id = ?");
+        $stmt->execute(array($game_id));
+    }
 }
 

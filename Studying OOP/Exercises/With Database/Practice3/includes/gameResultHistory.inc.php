@@ -40,6 +40,7 @@ foreach($reversed_score_array as $x){
     ECHO $x;
 }
 
+
 // ECHO var_dump($gameHistory->scores[1]);
 
 // TODO

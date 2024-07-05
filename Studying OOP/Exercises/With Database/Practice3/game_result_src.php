@@ -24,7 +24,6 @@
 <body>
     <div class="navigation-bar">
         <div class="score_tab"> 
-            <!-- <button class="refreshAnimation" id="refresh" onclick="refreshScore()"></button> -->
             <div class="scores_tab"></div>
         </div> 
     </div>
@@ -43,6 +42,12 @@
             <div class="history-row-data">
 
             </div>
+        </div>
+        <div class="removePopUp">
+            
+        </div>
+        <div class="empty-test">
+
         </div>
     </div>
 </body>

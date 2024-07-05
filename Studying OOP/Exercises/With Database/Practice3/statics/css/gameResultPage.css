@@ -51,3 +51,10 @@
 .history-row-data .gh_result div {
     padding: 1rem;
 }
+
+/* Remove */
+
+.gr-col img {
+    width: 5em;
+    cursor: pointer;
+}

@@ -12,22 +12,26 @@ function gameResultRender($title, $value){
     return $h_game_div;
 }
 
+function gameRemoveRender(){
+    $cb_func = "bugTest3(this)";
+    $h_img = '<img src="statics/imgs/remove.png" alt="Remove">';
+    $h_game_div = '<div class="gr-col"' . 'onclick=' . $cb_func . '>' . $h_img  .  '</div>';
+    return $h_game_div;
+}
+
 ECHO '<script>console.log("Runned2")</script>';
 
 session_start();
 // ECHO session_id();
 
-// Pull Data From Model
-
 $gameResults = new gameResult_PageCont();
 $results = $gameResults->getGameResult($_SESSION['game_id']);
 
+ECHO gameRemoveRender();
 ECHO gameResultRender("GAME ID" , $results[0][0]);
 ECHO gameResultRender("GAME RESULT", $results[0][1]);
 ECHO gameResultRender("PLAYER CHOICE", $results[0][3]);
 ECHO gameResultRender("ENEMY CHOICE", $results[0][4]);
 ECHO gameResultRender("GAME DATE", $results[0][2]);
 
-
-// Send Data to View
-
+    
