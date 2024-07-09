@@ -15,7 +15,7 @@ function gameResultRender($title, $value){
 function gameRemoveRender(){
     // $cb_func = "bugTest3(this)";
     $cb_func = "confirmPopUp()";
-    $h_img = '<img src="statics/imgs/remove.png" alt="Remove">';
+    $h_img = '<img src="statics/imgs/remove.png" alt="Remove" id="remove-button">';
     $h_game_div = '<div class="gr-col"' . 'onclick=' . $cb_func . '>' . $h_img  .  '</div>';
     return $h_game_div;
 }

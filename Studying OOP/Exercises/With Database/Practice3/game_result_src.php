@@ -36,7 +36,7 @@
                 <div class="main-row">Game Result</div>
                 <div class="main-row">Player Choice</div>
                 <div class="main-row">Enemy Choice</div>
-                <div class="main-row">Game Date</div>
+                <div class="main-row" id="main-row-date">Game Date</div>
                 <div class="main-row">Game Id</div>
             </div>
             <div class="history-row-data">

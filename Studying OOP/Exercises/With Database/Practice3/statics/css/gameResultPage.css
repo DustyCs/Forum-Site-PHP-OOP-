@@ -23,42 +23,73 @@
     flex-direction: column;
 }
 
+/* GameResult */
+
+.main-container .gameResult {
+    
+}
+
+/* Main Rows */
+
 .gameHistory{
     height: 65%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    border: 6px solid black;
 }
 
 .gameHistory .history-row-titles{
     height: 15%;
     display: flex;
     margin: 0 auto;
+    border: 3px solid black ;
 }
 
 .gameHistory .history-row-titles .main-row {
     padding: 2em;
 
 }
+.gameHistory .history-row-titles #main-row-date{
+    padding-left: 5em;
+    padding-right: 5em;
+}
 
 /* GH */
 
+.history-row-data .gh_game_result {
+    display: flex;
+    flex-direction: column;
+}
 
 .history-row-data .gh_result {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .history-row-data .gh_result div {
-    padding: 1rem;
+    padding: 1em;
+    padding-left: 4em;
+    padding-right: 4em;
 }
 
 /* Remove */
 
 .gr-col img {
-    width: 5em;
+    width: 4.7em;
     cursor: pointer;
 }
 
+.gr-col img:hover {
+    padding: 1rem;
+    border: 5px solid black;
+}
+
+.gr-col .active-img { 
+    padding: 1rem;
+    border: 5px solid black;
+}
 
 /* Pop Up */
 

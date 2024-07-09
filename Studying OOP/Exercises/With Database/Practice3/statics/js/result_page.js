@@ -24,9 +24,11 @@ const bugTest3 = () => {
 }
 
 const confirmPopUp = () => {
+    $('#remove-button').addClass('active-img')
     $(".removePopUp").show('fast');
 }
 
 const denyPopUp = () => {
+    $('#remove-button').removeClass('active-img')
     $(".removePopUp").hide('fast');
 }
