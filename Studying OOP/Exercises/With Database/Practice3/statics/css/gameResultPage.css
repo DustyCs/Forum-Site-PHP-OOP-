@@ -58,3 +58,19 @@
     width: 5em;
     cursor: pointer;
 }
+
+
+/* Pop Up */
+
+.removePopUp {
+    position: absolute;
+    display: none;
+    width: 40%;
+    top: 40%;
+    left: 30%;
+    background-color: aqua;
+}
+
+.remove-buttons {
+    display: flex;
+}

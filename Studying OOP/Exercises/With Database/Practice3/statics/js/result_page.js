@@ -8,26 +8,25 @@ const bugTest2 = (id) => {
 }
 
 const bugTest3 = () => {
-    if(confirmDelete){
-        $('.empty-test').load("includes/removeGameResult.inc.php", {
-            // game_id: game,
-            }
-        );
-        console.log("Removed");
-        new_game = document.querySelector('.game_result').id;
-        $('.game_result').load("includes/gameResult.inc.php", {
-            game_id: new_game,
-            }
-        );
-        console.log(new_game);
-        window.location.replace("./game_result_src.php");
-        
-        // location.reload();
-    }
+    $('.empty-test').load("includes/removeGameResult.inc.php", {
+        // game_id: game,
+        }
+    );
+    console.log("Removed");
+    new_game = document.querySelector('.game_result').id;
+    $('.game_result').load("includes/gameResult.inc.php", {
+        game_id: new_game,
+        }
+    );
+    console.log(new_game);
+    window.location.replace("./game_result_src.php");
+
 }
 
-const confirmDelete = () => {
-    let result = false;
+const confirmPopUp = () => {
+    $(".removePopUp").show('fast');
+}
 
-    return result;
+const denyPopUp = () => {
+    $(".removePopUp").hide('fast');
 }

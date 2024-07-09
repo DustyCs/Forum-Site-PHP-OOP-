@@ -20,8 +20,6 @@ function renderResult(Array $array){
     return $h_game_result;
 }
 
-// Since this functions the same as the score tabs - Just reused it instead
-
 $gameHistory = new ScoreTabContr();
 $gameHistory->getScores();
 
@@ -39,10 +37,3 @@ $reversed_score_array = array_reverse($score_array);
 foreach($reversed_score_array as $x){
     ECHO $x;
 }
-
-
-// ECHO var_dump($gameHistory->scores[1]);
-
-// TODO
-
-// GONNA HAVE TO PLACE ALL THOSE DATA INSIDE A DIV OF THEIR OWN TO LINE IT UP WITH THE TITLES!

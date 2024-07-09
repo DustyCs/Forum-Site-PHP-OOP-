@@ -44,7 +44,19 @@
             </div>
         </div>
         <div class="removePopUp">
-            
+            <div class="confirmation">
+                <div class="message">
+                    Are you sure you want to remove this game result?
+                </div>
+                <div class="remove-buttons">
+                    <div class="remove-button">
+                        <button onclick="bugTest3(this)">YES</button>
+                    </div>
+                    <div class="remove-button">
+                        <button onclick="denyPopUp()">NO</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="empty-test">
 
