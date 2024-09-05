@@ -1,7 +1,10 @@
-<?php 
-$_SESSION["enemy_score"] = $_POST["e_score"];
+<?php
 
-ECHO $_POST["e_score"];
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+ECHO $_SESSION["enemy_score"];;
 
 
 

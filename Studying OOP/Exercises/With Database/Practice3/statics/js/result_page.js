@@ -8,17 +8,17 @@ const bugTest2 = (id) => {
 }
 
 const bugTest3 = () => {
-    $('.empty-test').load("includes/removeGameResult.inc.php", {
-        // game_id: game,
-        }
-    );
+    $('.empty-test').load("includes/removeGameResult.inc.php");
     console.log("Removed");
-    new_game = document.querySelector('.game_result').id;
+    new_game = document.querySelectorAll('.game_result');
+    new_game_chosen = Math.floor(Math.random() * new_game.length);
+    new_game_id = new_game[new_game_chosen].id
+    // console.log(new_game_id);
     $('.game_result').load("includes/gameResult.inc.php", {
-        game_id: new_game,
+        game_id: new_game_id,
         }
     );
-    console.log(new_game);
+    
     window.location.replace("./game_result_src.php");
 
 }

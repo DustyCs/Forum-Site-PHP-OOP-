@@ -6,6 +6,7 @@ $(document).ready(function() {
     let enemyScore = 0; 
     $("input[name=enemy]").prop('disabled', true);
     $("#play").prop('disabled', false);
+    
 
     $("#play").on('click', function(){
         $("#play").prop('disabled', true);
@@ -93,6 +94,7 @@ $(document).ready(function() {
 setTimeout(
     function(){
         $(".scores_tab").load("includes/score_tab.inc.php"); 
+
     }, 1000 // Place this on a seperate file maybe... since it has no connection with this file
 
 

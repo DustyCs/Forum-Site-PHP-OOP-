@@ -23,7 +23,6 @@ function gameRemoveRender(){
 ECHO '<script>console.log("Runned2")</script>';
 
 session_start();
-// ECHO session_id();
 
 $gameResults = new gameResult_PageCont();
 $results = $gameResults->getGameResult($_SESSION['game_id']);

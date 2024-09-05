@@ -61,6 +61,7 @@
         <div class="empty-test">
 
         </div>
+        <div class="homeLink"><a href="index.php">Return to Game</a></div>
     </div>
 </body>
 </html>
@@ -69,6 +70,7 @@
 
 TO DO
 
+PAGINATION
 
 If theres more than 10 results send it to the next page using ajax
 get 10 more overwrite the first ten then again and again until user removes it all
@@ -77,5 +79,6 @@ jquery
 
 check how many divs / class? there is in the history row data then depending on that add 1, 2, 3, 4...10 pages
 
+center the css objects on its own style?
 
 -->

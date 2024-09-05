@@ -16,10 +16,6 @@ input[type="radio"]{
     display: none;
 }
 
-/* input[type="radio"]:checked + label {
-    border: 1px red solid;
-} */
-
 label {
     cursor: pointer;
 }
@@ -68,6 +64,16 @@ label {
     border: 2px black solid;
 }
 
+
+.current_scores .score_board .board_scores #play{
+    border: 3px white solid;
+    color: white;
+    background-color: black;
+    font-weight: 1000;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    cursor: pointer;
+}
 .current_scores .score_board .board_title h4{
     font-size: 2rem;
 }
@@ -99,3 +105,5 @@ label {
 .current_scores .score_board .board_scores .scores .score h5{
     margin: auto;
 }
+
+

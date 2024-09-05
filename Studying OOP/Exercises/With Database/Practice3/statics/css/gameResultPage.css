@@ -37,6 +37,7 @@
     flex-direction: column;
     margin: 0 auto;
     border: 6px solid black;
+    overflow: auto;
 }
 
 .gameHistory .history-row-titles{
@@ -66,6 +67,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+
+.history-row-data .gh_result:hover {
+    background-color: salmon;
 }
 
 .history-row-data .gh_result div {
@@ -84,6 +90,7 @@
 .gr-col img:hover {
     padding: 1rem;
     border: 5px solid black;
+    background-color: black;
 }
 
 .gr-col .active-img { 
@@ -99,9 +106,52 @@
     width: 40%;
     top: 40%;
     left: 30%;
-    background-color: aqua;
+    text-align: center;
+    border: 5px black solid;
+    background-color: white;
 }
 
 .remove-buttons {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.remove-buttons .remove-button{
+    margin: auto;
+}
+
+.remove-buttons .remove-button button{
+    border: none;
+    background-color: black;
+    color: red;
+    font-weight: 1000;
+    font-size: 1rem;
+    cursor: pointer;
+}
+/*  */
+
+.main-container .homeLink {
+    position: absolute;
+    margin: auto;
+    color: white;
+    background-color: black;
+}
+
+.main-container .homeLink a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 3em;
+    padding: 2rem;
+    transition: background-color 1s, color 1s;
+}
+
+.main-container .homeLink a:visited{
+    color: inherit;
+}
+
+.main-container .homeLink a:hover{
+    color: salmon;
+    background-color: white;
+}
+

@@ -11,4 +11,11 @@ class ScoreTabContr extends ScoreTab{
         $this->removeSelectedResult($game_id);
     }
     
+    public function getWinCount(){
+        return $this->getGameCount("Win");
+    }
+
+    public function getLoseCount(){
+        return $this->getGameCount("Lose");
+    }
 }

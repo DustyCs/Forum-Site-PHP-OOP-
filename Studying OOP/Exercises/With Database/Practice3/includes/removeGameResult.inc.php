@@ -11,4 +11,4 @@ if (session_status() === PHP_SESSION_NONE) {
 ECHO $_SESSION['game_id'];
 
 $scoreTab = new ScoreTabContr();
-// $scoreTab->removeScore($_SESSION['game_id']); // Careful
+$scoreTab->removeScore($_SESSION['game_id']); // Careful

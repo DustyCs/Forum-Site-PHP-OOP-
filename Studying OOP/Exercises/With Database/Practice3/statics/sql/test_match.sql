@@ -2,4 +2,6 @@
 
 -- DELETE FROM game_results WHERE game_id > 0;
 
-SELECT * FROM game_results;
+-- SELECT * FROM game_results;
+
+SELECT COUNT(*) FROM game_results WHERE game_result = "Tie";

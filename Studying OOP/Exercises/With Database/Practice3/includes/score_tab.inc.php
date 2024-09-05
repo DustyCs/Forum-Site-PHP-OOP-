@@ -1,5 +1,9 @@
 <?php 
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 include_once "../classes/dbh.classes.php";
 include_once "../classes/scoreTab.classes.php";
 include_once "../classes/scoreTabContr.classes.php";
@@ -23,6 +27,12 @@ $scoreTab->getScores();
 $scoreCount = count($scoreTab->scores);
 $score_array = [];
 $reversed_score_array;
+
+$winCount = $scoreTab->getWinCount();
+$loseCount = $scoreTab->getLoseCount();
+
+$_SESSION['player_score'] = $winCount;
+$_SESSION['enemy_score'] = $loseCount;
 
 
 for($x=0; $x < ($scoreCount); $x++){
